@@ -1,1 +1,23 @@
-<p>view-books works!</p>
+<div class="container">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">id</th>
+            <th scope="col">title</th>
+            <th scope="col">author</th>
+            <th scope="col">description</th>
+            <th scope="col">image</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of books">
+            <th scope="row">{{book._id}}</th>
+            <td>{{book.tittle}}</td>
+            <td>{{book.author}}</td>
+            <td>{{book.description}}</td>
+            <td>{{book.image}}</td>
+          </tr>
+        </tbody>
+      </table>
+      
+</div>
