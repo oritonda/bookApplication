@@ -1,5 +1,5 @@
 <div class="container">
-    <table class="table">
+    <table class="table mt-5">
         <thead class="thead-dark">
           <tr>
             <th scope="col">id</th>
@@ -19,8 +19,8 @@
             <td>{{book.description}}</td>
             <td>{{book.image}}</td>
             <td class="action">
-                <button type="button" class="btn btn-outline-danger mr-1" (click)="deleteBook(book._id)" routerLink="/view/books">delete</button>
-                <button type="button" class="btn btn-outline-dark">update</button>
+                <button type="button" class="btn btn-outline-danger mr-1" (click)="deleteBook(book._id)" >delete</button>
+                <button type="button" class="btn btn-outline-dark" routerLink="/edit/books/{{book._id}}">update</button>
             </td>
           </tr>
         </tbody>

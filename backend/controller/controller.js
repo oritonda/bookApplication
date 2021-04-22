@@ -61,3 +61,14 @@ exports.updateBook = (req, res) => {
         res.send(err);
       });
 };
+// find a book by id
+exports.getBook = (req,res)=>{
+  const {id} = req.params
+  dbBook.findById(id, (error, data) => {
+    if (error) {
+      return next(error)
+    } else {
+      res.json(data)
+    }
+  })
+}
