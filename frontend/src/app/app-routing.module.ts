@@ -7,8 +7,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   { path: 'add/books', component: AddBookComponent },
-  { path: 'edit/boobs', component: EditBookComponent },
+  { path: 'edit/books/:id', component: EditBookComponent },
   { path: 'view/books', component: ViewBooksComponent },
+  {path:'**', redirectTo:'view/books', pathMatch:'full'}
 ];
 
 @NgModule({

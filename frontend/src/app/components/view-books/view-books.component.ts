@@ -26,4 +26,11 @@ export class ViewBooksComponent implements OnInit {
     })
   }
 
+  // fuction to delete a book
+  deleteBook(id:string)
+  {
+    // subscribing to service
+    this.api.deleteBook(id).subscribe()
+  }
+
 }

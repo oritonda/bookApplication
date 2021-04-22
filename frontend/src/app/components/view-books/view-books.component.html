@@ -7,6 +7,8 @@
             <th scope="col">author</th>
             <th scope="col">description</th>
             <th scope="col">image</th>
+            <th scope="col"></th>
+
           </tr>
         </thead>
         <tbody>
@@ -16,6 +18,10 @@
             <td>{{book.author}}</td>
             <td>{{book.description}}</td>
             <td>{{book.image}}</td>
+            <td class="action">
+                <button type="button" class="btn btn-outline-danger mr-1" (click)="deleteBook(book._id)" routerLink="/view/books">delete</button>
+                <button type="button" class="btn btn-outline-dark">update</button>
+            </td>
           </tr>
         </tbody>
       </table>
