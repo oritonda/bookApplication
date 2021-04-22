@@ -1,11 +1,12 @@
 // imports
 const express = require("express");
+const controller = require("../controller/controller")
 const router = express.Router();
 
 // path to add a book
-router.delete("/book")
+router.post("/book",controller.addBook)
 // path to view a book
-router.get("/books")
+router.get("/books",controller.getBooks)
 // path to update a book 
 router.put("/book/:id")
 // path to delete a book 
