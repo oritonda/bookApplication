@@ -8,7 +8,7 @@ router.post("/books",controller.addBook)
 // path to view a book
 router.get("/books",controller.getBooks)
 // path to get a book by id
-router.get("/book/:id", controller.getBook)
+router.get("/books/:id", controller.getBook)
 // path to update a book 
 router.put("/books/:id", controller.updateBook)
 // path to delete a book 

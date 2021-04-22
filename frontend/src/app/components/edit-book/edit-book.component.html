@@ -1,30 +1,31 @@
-<div class="container">
-    <form id="addBook" onsubmit="return false">
+<div class="container" *ngIf="book">
+    <form class="mt-5" id="addBook" onsubmit="return false">
         
-        <div class="form-group">
+        <div class="form-group" >
             <label for="exampleInputEmail1">Title</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter book title" #title required>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter book title" value="{{book.tittle}}" #title required>
           </div>
 
           <div class="form-group">
             <label for="exampleInputEmail1">Author</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter auhthor's name" #author required>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter auhthor's name" value="{{book.author}}" #author required>
           </div>
   
 
           <div class="form-group">
             <label for="exampleInputEmail1">Description</label>
-            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter book description" #description required>
+            <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter book description" value="{{book.description}}" #description required>
           </div>
 
         <div class="form-group">
           <label for="exampleInputPassword1">Image</label>
-          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Select book image" #image required>
+          <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Select book image" value="{{book.image}}" #image required>
         </div>
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
           <label class="form-check-label" for="exampleCheck1">Check me out</label>
         </div>
-        <button type="submit" class="btn btn-primary" (click)="addBook(title.value, author.value, description.value, image.value)" routerLink="/view/books">Submit</button>
+        
+        <button type="submit" class="btn btn-primary" (click)="updateBook(title.value, author.value, description.value, image.value)" routerLink="/view/books">update</button>
       </form>
 </div>

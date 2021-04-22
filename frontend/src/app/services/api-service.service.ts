@@ -27,4 +27,9 @@ export class ApiServiceService {
   {
     return this.http.delete(`${this.api_url}/${id}`)
   }
+  // function to get book by id 
+  getBook(id:string)
+  {
+    return this.http.get(`${this.api_url}/${id}`)
+  }
 }
