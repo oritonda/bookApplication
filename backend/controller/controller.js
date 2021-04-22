@@ -44,3 +44,20 @@ exports.deleteBook = (req, res) => {
         res.send(err);
       });
 };
+// funtion to update a book using a book id
+exports.updateBook = (req, res) => {
+    const {id} = req.params
+    const { tittle, author, description, image } = req.body;
+    book = {
+        tittle: tittle,
+        author: author,
+        description: description,
+        image: image,
+      };
+    dbBook.findByIdAndUpdate({_id:id},book).then((book) => {
+        json.send(book);
+      })
+      .catch((err) => {
+        res.send(err);
+      });
+};
