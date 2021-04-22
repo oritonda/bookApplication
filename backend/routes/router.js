@@ -10,7 +10,7 @@ router.get("/books",controller.getBooks)
 // path to update a book 
 router.put("/book/:id")
 // path to delete a book 
-router.delete("/book/:id")
+router.delete("/book/:id", controller.deleteBook)
 
 // exporting all routes
 module.exports = router;
