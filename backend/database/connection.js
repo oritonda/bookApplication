@@ -1,7 +1,7 @@
 //imports
 const mongoose = require("mongoose");
 //Connecting to the database
-mongoose.connect("mongodb://localhost/TodoDB", {
+mongoose.connect("mongodb://localhost/books", {
   useUnifiedTopology: true,
   useNewUrlParser: true,
 });
