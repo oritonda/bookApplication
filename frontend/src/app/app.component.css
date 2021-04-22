@@ -1,0 +1,12 @@
+.container{
+    width: 100vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+  box-shadow: 11px 18px 40px 5px rgba(0, 0, 0, 0.75);
+  padding: 2%;
+  margin-top: 10vh;
+}
