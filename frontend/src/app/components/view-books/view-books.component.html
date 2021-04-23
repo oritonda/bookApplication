@@ -1,48 +1,25 @@
 <div class="container">
-    <!-- <table class="table mt-5">
-        <thead class="thead-dark">
-          <tr>
-            <th scope="col">id</th>
-            <th scope="col">title</th>
-            <th scope="col">author</th>
-            <th scope="col">description</th>
-            <th scope="col">image</th>
-            <th scope="col"></th>
-
-          </tr>
-        </thead>
-        <tbody>
-          <tr *ngFor="let book of books">
-            <th scope="row">{{book._id}}</th>
-            <td>{{book.tittle}}</td>
-            <td>{{book.author}}</td>
-            <td>{{book.description}}</td>
-            <td class="block"><img src="{{book.image}}" class="rounded mx-auto d-block" alt="..."></td>
-            <td class="action">
-                <button type="button" class="btn btn-outline-danger mr-1" (click)="deleteBook(book._id)" >delete</button>
-                <button type="button" class="btn btn-outline-dark" routerLink="/edit/books/{{book._id}}">update</button>
-            </td>
-          </tr>
-        </tbody>
-      </table> -->
-<!-- 
+  
       <div class="books">
-        <div class="card" style="width: 300px; height: 500px;" *ngFor="let book of books">
-          <img src="{{book.image}}" class="card-img-top" alt="...">
+        <div class="card mt-2" style="width: 18rem; height: 500px;" *ngFor="let book of books">
+    <div class='img4 mt-2'>
+      <img src="{{book.image}}" class="card-img-top" alt="...">
+    </div>
+   
+          <div class="card-header">
+            <h5 class="card-title"> {{book.tittle}}</h5>
+            <p class="card-text">{{book.author}}</p>
+          </div>
           <div class="card-body">
-            <h5 class="card-title">{{book.tittle}}</h5>
             <p class="card-text">{{book.description}}</p>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Cras justo odio</li>
-            <li class="list-group-item">Dapibus ac facilisis in</li>
-            <li class="list-group-item">Vestibulum at eros</li>
-          </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+          <div class="card-footer">
+            <button type="button" class="btn btn-outline-danger mr-1" (click)="deleteBook(book._id)" >delete</button>
+            <button type="button" class="btn btn-outline-dark" routerLink="/edit/books/{{book._id}}">update</button>
           </div>
         </div>
-      </div> -->
+      </div>
+
+      
       
 </div>

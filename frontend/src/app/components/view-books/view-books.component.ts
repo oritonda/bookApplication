@@ -31,6 +31,8 @@ export class ViewBooksComponent implements OnInit {
   {
     // subscribing to service
     this.api.deleteBook(id).subscribe()
+    // get books
+    this.getBooks();
   }
 
 }
