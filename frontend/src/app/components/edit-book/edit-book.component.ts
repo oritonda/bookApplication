@@ -11,7 +11,7 @@ export class EditBookComponent implements OnInit {
 
   
 
-  constructor(private api:ApiServiceService, private router:ActivatedRoute) { }
+  constructor(private api:ApiServiceService, private router:ActivatedRoute, private route:Router) { }
     // initializing book id
   bookId:string = `${this.router.snapshot.paramMap.get('id')}`
   // array to contain book details
@@ -32,13 +32,18 @@ export class EditBookComponent implements OnInit {
   {
 
     let book = {
-      tittle: tittle,
-      author: author,
-      description: description,
-      image: image,
+      tittle: tittle.trim(),
+      author: author.trim(),
+      description: description.trim(),
+      image: image.trim(),
     };
+  
+    
+      this.api.updateBook(this.bookId,book).subscribe()
+      this.route.navigate(['/view/books']);
+    
 
-    this.api.updateBook(this.bookId,book).subscribe()
+
 
   }
 

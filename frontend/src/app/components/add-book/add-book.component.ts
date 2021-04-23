@@ -16,10 +16,10 @@ export class AddBookComponent implements OnInit {
   {
     // creating an oject for book
     let book = {
-      tittle: tittle,
-      author: author,
-      description: description,
-      image: image,
+      tittle: tittle.trim(),
+      author: author.trim(),
+      description: description.trim(),
+      image: image.trim(),
     };
     
     //
