@@ -1,10 +1,15 @@
 // imports
-//Imports
 const express = require("express");
 const route = require("./routes/router");
 const bodyParser = require("body-parser");
 const cors = require("cors");
+//  database connetion
 const mongoose = require("./database/connection");
+// environments
+const enviroments = require('dotenv')
+require('dotenv').config()
+// port number
+const port = 3000; 
 // initializing app
 const app = express();
 
@@ -15,6 +20,6 @@ app.use(cors());
 app.use('/',route)
 
 
-app.listen(3000, () => {
-  console.log("Listening on port 3000");
+app.listen(port, () => {
+  console.log("Listening on port " + port);
 });

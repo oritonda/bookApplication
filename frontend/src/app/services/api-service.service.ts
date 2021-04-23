@@ -1,3 +1,4 @@
+import { environment } from './../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
@@ -5,7 +6,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ApiServiceService {
-  api_url:string = "http://localhost:3000/books"
+  api_url:string = environment.api_url
   constructor(private http:HttpClient) { }
 
   // funtion to add a book
