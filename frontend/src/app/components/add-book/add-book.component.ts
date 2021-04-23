@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ApiServiceService } from './../../services/api-service.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddBookComponent implements OnInit {
 
-  constructor(private bookApi:ApiServiceService) { }
+  constructor(private bookApi:ApiServiceService, private router:Router) { }
 
   ngOnInit(): void {
   }
@@ -21,9 +22,18 @@ export class AddBookComponent implements OnInit {
       description: description.trim(),
       image: image.trim(),
     };
-    
+
+    if (tittle.trim()=='' || author.trim()=='' || description.trim()=='' || image.trim()=='')
+    {
+
+    }
+    else
+    {
+      this.bookApi.addBook(book).subscribe()
+      this.router.navigate(["/view/books"])
+    }
     //
-    this.bookApi.addBook(book).subscribe()
+    
 
   }
 

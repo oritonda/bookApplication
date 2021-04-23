@@ -21,11 +21,7 @@
           <label for="exampleInputPassword1">Image</label>
           <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Select book image" #image required>
         </div>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" required>
-          <label class="form-check-label" for="exampleCheck1">Check me out</label>
-        </div>
-        <button type="submit" class="btn btn-outline-success mr-2" (click)="addBook(title.value, author.value, description.value, image.value)" routerLink="/view/books">Submit</button>
+        <button type="submit" class="btn btn-outline-success mr-2" (click)="addBook(title.value, author.value, description.value, image.value)" >Submit</button>
         <button type="submit" class="btn btn-outline-danger mr-2" routerLink="/view/books">cancel</button>
       </form>
 </div>

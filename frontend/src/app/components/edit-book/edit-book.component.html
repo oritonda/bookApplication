@@ -21,10 +21,6 @@
           <label for="exampleInputPassword1">Image</label>
           <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Select book image" value="{{book.image}}" #image required>
         </div>
-        <div class="form-check">
-          <input type="checkbox" class="form-check-input" id="exampleCheck1" #confirm required>
-          <label class="form-check-label" for="exampleCheck1">Confirm</label>
-        </div>
         <button type="submit" class="btn btn-outline-success mr-2" (click)="updateBook(title.value, author.value, description.value, image.value)">update</button>
         <button type="submit" class="btn btn-outline-danger mr-2" routerLink="/view/books">cancel</button>
       </form>

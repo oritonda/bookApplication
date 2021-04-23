@@ -37,10 +37,17 @@ export class EditBookComponent implements OnInit {
       description: description.trim(),
       image: image.trim(),
     };
-  
-    
+    if (tittle.trim()=='' || author.trim()=='' || description.trim()=='' || image.trim()=='')
+    {
+
+    }
+    else
+    {
       this.api.updateBook(this.bookId,book).subscribe()
       this.route.navigate(['/view/books']);
+    }
+    
+      
     
 
 
